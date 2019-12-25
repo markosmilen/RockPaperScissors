@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundCol"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ROCK-PAPER-SCISSORS!"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Choose your weapon"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/bacgroundButton"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:id="@+id/rockButton"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="centerInside"
+            android:background="@color/bacgroundButton"
+            android:src="@drawable/cave"
+            android:padding="20dp"
+            android:onClick="onClickButton"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/bacgroundButton"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:id="@+id/paperButton"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:padding="20dp"
+            android:background="@color/bacgroundButton"
+            android:src="@drawable/note"
+            android:scaleType="centerInside"
+            android:onClick="onClickButton"/>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/bacgroundButton"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="onClickButton">
+
+        <ImageButton
+            android:id="@+id/scissorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/scissors"
+            android:background="@color/bacgroundButton"
+            android:onClick="onClickButton"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+    <TextView
+        android:id="@+id/Player1text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_weight="4"/>
+
+    <TextView
+        android:id="@+id/Player2text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_weight="4"/>
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:layout_weight="2"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/orange"
+        android:background="@color/bacgroundButton"
+        android:padding="20dp"
+        android:visibility="visible"
+        android:onClick="onClickPlayButton"
+        />
+     <Button
+         android:id="@+id/replayBut"
+         android:layout_width="140dp"
+         android:layout_height="wrap_content"
+         android:text="REPLAY"
+         android:textSize="17dp"
+         android:textColor="@color/orange"
+         android:background="@color/bacgroundButton"
+         android:padding="15dp"
+         android:layout_alignParentLeft="true"
+         android:layout_marginTop="30dp"
+         android:layout_marginLeft="30dp"
+         android:visibility="invisible"
+         android:onClick="onClickReplay"/>
+
+     <Button
+         android:id="@+id/highscoreBut"
+         android:layout_width="140dp"
+         android:layout_height="wrap_content"
+         android:text="HIGHSCORE"
+         android:textSize="17dp"
+         android:textColor="@color/orange"
+         android:background="@color/bacgroundButton"
+         android:padding="15dp"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="30dp"
+         android:layout_marginRight="30dp"
+         android:visibility="invisible"
+         android:onClick="onClickHighscore"/>
+
+    </RelativeLayout>
+</LinearLayout>

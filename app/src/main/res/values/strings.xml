@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">rockPaperScissors</string>
+    <string name="you_selected">You Selected:</string>
+    <string name="computer_selected">Computer Selected:</string>
+
+    <!-- result strings -->
+    <string name="result_draw">Battle ended draw</string>
+    <string name="result_you_win">YOU WIN</string>
+    <string name="result_computer_win">COMPUTER WINS</string>
+</resources>
